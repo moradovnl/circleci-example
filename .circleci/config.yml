@@ -15,7 +15,7 @@ jobs:
               --crawler https://brokencrystals.com/
               --smart) >> "$BASH_ENV"
               
-              echo $BASH_ENV
+              cat $BASH_ENV
       - run: 
           name: Get the output scan url 🔗
           command: |
