@@ -9,11 +9,12 @@ jobs:
       - run: sudo npm install @neuralegion/nexploit-cli -g --unsafe-perm=true || true
       - run:
           name: Starting Nexploit scan 🏁
-          command: |
+          command: >
               echo export SCAN_ID=$(nexploit-cli scan:run --token $NEXPLOIT_TOKEN
               --name "BC Scan from CircleCI"
               --crawler https://brokencrystals.com/
               --smart) >> "$BASH_ENV"
+              
               echo $BASH_ENV
       - run: 
           name: Get the output scan url 🔗
