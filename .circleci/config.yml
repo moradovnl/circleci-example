@@ -27,7 +27,7 @@ jobs:
               --interval 30s
               --timeout 20m
               --token $NEXPLOIT_TOKEN
-              --breakpoint medium_issue ${SCAN_ID})
+              --breakpoint high_issue ${SCAN_ID})
       - run:
           name: Stop Scan 🛑
           when: on_fail
